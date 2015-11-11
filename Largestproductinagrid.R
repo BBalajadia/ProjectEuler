@@ -25,6 +25,7 @@ What is the greatest product of four adjacent numbers in any direction (up, down
 20 69 36 41 72 30 23 88 34 62 99 69 82 67 59 85 74 04 36 16
 20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54
 
+
 My Solution
 
 

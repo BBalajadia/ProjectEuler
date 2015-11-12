@@ -10,7 +10,7 @@ What is the largest prime factor of the number 600851475143 ?
 My Solution
 
 # function to test if a number is prime
-is.prime <- function(x) x == 2L || all(x %% 2L:floor(sqrt(x)) != 0)
+is.prime <- function(x) x == 2L || all(x %% 2L:ceiling(sqrt(x)) != 0)
 
 # prime numbers (2, sqrt(600851475143))
 n <- floor(sqrt(600851475143))

@@ -9,17 +9,25 @@ What is the smallest positive number that is evenly divisible by all of the numb
 
 
 My Solution
+https://bryanbalajadia.wordpress.com/2015/11/26/project-euler-problem-5-smallest-multiple/
 
-num <- 1
-for (i in 1:20) {
-  remainder <- num %% i
-  if (remainder != 0) {
-    if (i %% remainder == 0) {
-      num <- num * i / remainder
-    } else {
-      num <- num * i
-    }
-  }
+GCD <- function(x,y) {
+  if (x %% y == 0) {
+    return (y) }
+  else GCD(y, x %% y)
 }
-num
+ 
+GCD(4,6) # Example: GCD of 4 and 6
+# [1] 2
+
+smallest.composite <- function (n) {
+  composite <- 1
+  for (i in 1:n) {
+    composite <- composite * i / GCD(composite, i)
+  }
+  return (composite)
+}
+
+smallest.composite (20)
 # [1] 232792560
+
